@@ -6,8 +6,10 @@ public class Simple_Java {
     public static void main(String[] args) {
         // I. print
         // The statements used by the program are placed here
-        System.out.println("Welcome to the course - you will learn to program!");
-        System.out.println("Peashooter is the best plant in pvz.");
+        System.out.println("Welcome to the course - you will learn to program!");// Print with new line at end
+        System.out.print("Peashooter is the best plant in pvz."); // Printing continuous text or builds on the same line.
+        System.out.print("\n"); // The print above + this one is = println
+        System.out.printf("%24s%n", "Multiplication Table"); // Formatting currencies, numbers, widths, or alignments.
 
         // II. Variable
         // 1. Simple Variable
@@ -57,6 +59,12 @@ public class Simple_Java {
         int d = 0b1010; //Binary (Base 2): Prefixed with 0b or 0B //represent 10
         int e = 0146; //Octal (Base 8): Prefixed with a leading 0. //represents 102
         int f = 0x123Face; //Hexadecimal (Base 16): Prefixed with 0x or 0X
+        char g =  '\u03b2'; // Read Unicode and ASCII Code for more information
+        System.out.println(g);
+        char h = 'h';
+        System.out.println(++h); // This will print the character after h
+        int w = 67;
+        System.out.println((char) w); // This will print the Unicode of int w
         long distance = 2000L; // or 2000l // Long Type: To specify a long (64-bit) literal, you must append the suffix L or l
         //Float Literal
         double price1 = 19.99; //standard decimal //you can also add d or D at the end like float //it will display 16 digits after .
@@ -362,8 +370,8 @@ public class Simple_Java {
         for (int j = 0; j <=16; j = j+2) {
             System.out.println(j);
             String[] seat = {"Jenny", "Duy", "Larry", "Angie"};
-            for (int g = 0; g < seat.length; g++){
-                System.out.println("Seat number " + g + " got taken by " + seat[g]);
+            for (int z = 0; z < seat.length; z++){
+                System.out.println("Seat number " + z + " got taken by " + seat[z]);
             }
         }
         // 2. "for-each" loop (Will use for array which will be introduced in section XI.)
