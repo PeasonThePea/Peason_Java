@@ -5,7 +5,7 @@ import java.util.Scanner;
 // You can pass data, known as parameters, into a method.
 // They are also known as functions (Which is the same name in python)
 // Why use methods? To reuse code: define the code once, and use it many times.
-public class java_Method {
+public class Java_Method {
     //A method need to be defines within a class.
     //I. Define a method:
     static void myMethod(){
