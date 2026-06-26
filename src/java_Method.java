@@ -135,7 +135,13 @@ public class java_Method {
         }
     }
 
-
+    // VII. Passing Array Through Method
+    // When passing an array to a method, the reference of the array is passed to the method.
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
 
     // Example of output
     //Call the method:
@@ -199,6 +205,12 @@ public class java_Method {
         System.out.println(factorialMethod(3));
         System.out.println(factorialMethod(5));
         countdown(5);
+
+        //Sixth Example
+        printArray(new int[] {3, 2, 1 ,4 ,6});
+        int[] myList = {1,2,3,4,5,6,7,6,7};
+        System.out.println();
+        printArray(myList);
 
 
     }

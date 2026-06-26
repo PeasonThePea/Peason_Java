@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.Random;
@@ -374,7 +375,7 @@ public class Simple_Java {
                 System.out.println("Seat number " + z + " got taken by " + seat[z]);
             }
         }
-        // 2. "for-each" loop (Will use for array which will be introduced in section XI.)
+        // 2. "for-each" loop (Will use for array which will be introduced in section XII.)
         // which is used exclusively to loop through elements in an array (or other data structures)
         String[] minecraftPotion ={"Strength", "Speed", "Jump", "Resistance"};
         for (String Potion:minecraftPotion){
@@ -388,28 +389,60 @@ public class Simple_Java {
         // We have now declared a variable that holds an array of strings.
         // To insert values to it, you can place the values in a comma-separated list, inside curly braces { }
         // 1. Single-Dimension Array
-        String[] car = {"BMW", "Volvo", "Ford", "Mazda", "Lamborghini", "Ferrari"}; //List of string
-        int[] myNum = {12, 232, 243, 765, 456}; //List of number
-        System.out.println(car[0]); //Array indexes start with 0: [0] is the first element. [1] is the second element, etc.
-        car[0] = "Toyota"; //change an array element
-        System.out.println(car.length); //This will print the array length
-        String[] minecraftWeapon = new String[4];// Size is 4 //You can also create an array by specifying its size with new.
-        // This makes an empty array with space for a fixed number of elements, which you can fill later
-        minecraftWeapon[0] = "Sword";
-        minecraftWeapon[1] = "Spear";
-        minecraftWeapon[2] = "Mace";
-        minecraftWeapon[3] = "Axe";
-        // Loop through an array
-        for (int z = 0; z < minecraftWeapon.length; z++) {
+        // i. Create list
+        double[] myList = new double[67];
+        double[] myList2 = new double[67];
+        double[] myList3 = new double[0];
+        double[] myList4 = new double[67];
+        myList[0] = (double)1.0F;
+        String[] car = new String[]{"BMW", "Volvo", "Ford", "Mazda", "Lamborghini", "Ferrari"};
+        int[] myNum = new int[]{12, 232, 243, 765, 456};
+        // Printing item in an array
+        System.out.println(car[0]);
+        car[0] = "Toyota";
+        // Array Length
+        System.out.println(car.length);
+        // Printing Array
+        System.out.println(Arrays.toString(car));
+        // Use Loop to print array
+        String[] minecraftWeapon = new String[]{"Sword", "Spear", "Mace", "Axe"};
+        for(int z = 0; z < minecraftWeapon.length; ++z) {
             System.out.println(minecraftWeapon[z]);
         }
+        // How to Sum all number in a list
         int sumOfNum = 0;
-        for (int y = 0; y < myNum.length; y++) {
+        for(int y = 0; y < myNum.length; ++y) {
             sumOfNum += myNum[y];
         }
+        //For each loop for array
         System.out.println("The sum is " + sumOfNum);
+        for(String i : minecraftWeapon) {
+            System.out.println(i);
+        }
+        // Move List to the left
+        double[] myList5 = new double[]{(double)1.0F, (double)4.0F, (double)5.0F, (double)2.0F, (double)7.0F, (double)3.0F};
+        double first1 = myList5[0];
+        for(int i = 0; i < myList5.length - 1; ++i) {
+            myList5[i] = myList5[i + 1];
+        }
+        myList5[myList5.length - 1] = first1;
+        System.out.println(Arrays.toString(myList5));
+        // Move lit to the right
+        double[] myList6 = new double[]{(double)1.0F, (double)4.0F, (double)5.0F, (double)2.0F, (double)7.0F, (double)3.0F};
+        double lastShiftRight = myList6[myList6.length - 1];
+        for(int i = myList6.length - 1; i > 0; --i) {
+            myList6[i] = myList6[i - 1];
+        }
+        myList6[0] = lastShiftRight;
+        System.out.println(Arrays.toString(myList6));
+        // Copy List
+        String[] copyList1 = minecraftWeapon; // Method 1
+        String[] copyList2 = new String[minecraftWeapon.length]; // Method 2
+        System.arraycopy(minecraftWeapon, 0, copyList2, 0, minecraftWeapon.length);
+
         // 2. Multi-Dimension Arrays
         int[][] myNumbers = {{0,2,4,6},{1,3,5,7}};
+        int[][] var10000 = new int[][]{{0, 2, 4, 6}, {1, 3, 5, 7}};
 
         }
 }
